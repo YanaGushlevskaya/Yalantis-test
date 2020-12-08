@@ -5,8 +5,8 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={Main} />
-      <Route exact path="/employees" component={Employees} />
+      <Route exact path="/Yalantis-test" component={Main} />
+      <Route exact path="/Yalantis-test/employees" component={Employees} />
     </Switch>
   );
 }
