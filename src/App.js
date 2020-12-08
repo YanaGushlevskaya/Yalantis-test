@@ -1,14 +1,14 @@
 import Employees from './components/employees/employees';
-import { Route, BrowserRouter, Redirect } from 'react-router-dom';
+import { Route, Redirect, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route path="/Yalantis-test">
-        <Redirect exact to="/Yalantis-test/employees" />
-        <Route path="/Yalantis-test/employees" component={Employees} />
+    <HashRouter>
+      <Route path="/">
+        <Redirect exact to="/employees" />
+        <Route path="/employees" component={Employees} />
       </Route>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
