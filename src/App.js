@@ -1,14 +1,13 @@
-import Employees from './components/employees/employees';
-import { Route, Redirect, HashRouter } from 'react-router-dom';
+import Employees from './components/Employees/employees';
+import Main from './components/Main/main';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
-      <Route path="/">
-        <Redirect exact to="/employees" />
-        <Route path="/employees" component={Employees} />
-      </Route>
-    </HashRouter>
+    <Switch>
+      <Route exact path="/" component={Main} />
+      <Route exact path="/employees" component={Employees} />
+    </Switch>
   );
 }
 

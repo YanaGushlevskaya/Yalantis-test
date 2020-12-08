@@ -5,8 +5,16 @@
 }
 
 body,
-html {
+html,
+.main-page {
   width: 100%;
+  height: 100%;
+}
+
+.main-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .employees-container {
