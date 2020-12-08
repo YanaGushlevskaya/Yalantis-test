@@ -1,13 +1,13 @@
 import Employees from './components/employees/employees';
-import { Route, Redirect, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path='/'>
-        <Redirect to='/employees' />
+      <Route path="/">
+        <Redirect exact to="/employees" />
+        <Route path="/employees" component={Employees} />
       </Route>
-      <Route path='/employees' component={Employees} />
     </BrowserRouter>
   );
 }
