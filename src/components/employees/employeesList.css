@@ -1,0 +1,59 @@
+.alphabet-list-wrapper {
+  width: 100%;
+}
+
+.alphabet-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alphabet-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.alphabet-item > span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alphabet-list-wrapper .employyes-list label {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .alphabet-list-wrapper {
+    width: 60%;
+    justify-content: flex-start;
+  }
+
+  .alphabet-item {
+    width: 45%;
+  }
+
+  .alphabet-item:not(:nth-child(2n)) {
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .alphabet-item {
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .alphabet-item:not(:nth-child(2n)) {
+    margin-right: 5%;
+  }
+
+  .alphabet-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .alphabet-item > span {
+    font-size: 20px;
+  }
+}
